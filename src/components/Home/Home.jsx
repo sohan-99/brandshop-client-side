@@ -3,6 +3,7 @@
 
 import ExtraSection1 from "../ExtraSection/ExtraSection1";
 import ExtraSection2 from "../ExtraSection/ExtraSection2";
+import Footer from "../Footer/Footer";
 import Slider from "../Header/Slider";
 import Navber from "../Navber/Navber";
 import BrandCard from "./BrandCard";
@@ -32,6 +33,7 @@ const Home = () => {
             
             <ExtraSection1></ExtraSection1>
             <ExtraSection2></ExtraSection2>
+            <Footer></Footer>
         </div>
     );
 };
