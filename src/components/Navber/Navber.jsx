@@ -1,10 +1,26 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Navber = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+    }
+
 
     const links =
         <>
@@ -29,7 +45,7 @@ const Navber = () => {
                 </div>
                 {/* <img className="w-[160px] h-20 " src="https://i.ibb.co/BnxJMb3/Whats-App-Image-2023-10-18-at-2-11-09-PM.jpg" alt="" /> */}
                 <Link to='/'>
-                <h2 className="lg:text-4xl lg:font-extrabold"><span className="text-indigo-900">Device</span>  <span className="text-red-600">Dazzle</span></h2>
+                    <h2 className="lg:text-4xl lg:font-extrabold"><span className="text-indigo-900">Device</span>  <span className="text-red-600">Dazzle</span></h2>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -38,12 +54,12 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {/* <div className=" mr-2">
+                <div className=" mr-2">
                     <div >
                         {user && user.uid ? (
                             <div className="flex   items-center">
                                 <p className="text-lg font-extrabold">{user.displayName}</p>
-                                <img className="w-12 h-12 rounded-full border-4 border-red-600" src={user.photoURL} alt="User Profile" />
+                                <img className="w-12 h-12 rounded-full border-4 border-green-600" src={user.photoURL} alt="User Profile" />
                             </div>
                         ) : (
                             <div className="avatar offline">
@@ -59,13 +75,11 @@ const Navber = () => {
                     user ?
                         <button onClick={handleSignOut} className="btn btn-primary">Sign Out</button>
                         :
-                        // <Link to='/login'>
-                        //     <button className="btn btn-primary">Login</button>
-                        // </Link>
-                } */}
-                <Link to='/login'>
-                    <button className="btn rounded-full btn-primary text-xl font-semibold">Login</button>
-                </Link>
+                        <Link to='/login'>
+                        <button className="btn rounded-full btn-primary text-xl font-semibold">Login</button>
+                    </Link>
+                }
+               
             </div>
 
         </div>

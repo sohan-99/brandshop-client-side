@@ -10,6 +10,8 @@ import Signup from './components/Signup/Signup';
 import AddProduct from './components/AddProduct/AddProduct';
 import MyCard from './components/MyCard/MyCard';
 import About from './components/About/About';
+import AuthProvider from './Provider/AuthProvider';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
+    <ToastContainer />
     <RouterProvider router={router} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )
