@@ -24,7 +24,8 @@ const Home = () => {
             <Navber></Navber>
             <h2 className="lg:text-4xl lg:font-bold text-center my-3"><span className="text-cyan-500">Advertise Products</span> </h2>
             <Slider></Slider>
-            <h2 className="lg:text-5xl lg:font-bold text-center my-3"><span className="text-red-600">Our</span> Mobile <span className="text-red-600"> Catagory</span></h2>
+            <h2 className="lg:text-5xl lg:font-bold text-center my-3"><span className="text-red-600">FIND </span> YOUR PERFECT<span className="text-red-600"> MATCH</span></h2>
+            <h2 className="text-center text-lg font-medium">EXPLORE AND FIND RIGHT ONE</h2>
             <div className="  grid lg:grid-cols-3 md:grid-cols-2 gap-x-3">
                 {
                     brands.map(brand => <BrandCard key={brand.id} brand={brand}></BrandCard>)
