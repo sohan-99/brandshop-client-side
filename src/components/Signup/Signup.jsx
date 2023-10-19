@@ -26,10 +26,10 @@ const Signup = () => {
         console.log(email, photo, name, password);
 
         // Validate the password
-        if (password.length < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+[\]{};':"\\|,.<>?]/.test(password)) {
-            toast.error("Password does not meet requirements.");
-            return;
-        }
+        // if (password.length < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+[\]{};':"\\|,.<>?]/.test(password)) {
+        //     toast.error("Password does not meet requirements.");
+        //     return;
+        // }
 
 
         // create user

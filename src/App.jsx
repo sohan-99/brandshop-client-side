@@ -1,9 +1,7 @@
-import { useContext } from "react"
-import { AuthContext } from "./Provider/AuthProvider"
+
 
 function App() {
-const {user} =useContext(AuthContext)
-console.log(user);
+
 
   return (
     <>

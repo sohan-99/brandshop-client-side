@@ -12,6 +12,9 @@ import MyCard from './components/MyCard/MyCard';
 import About from './components/About/About';
 import AuthProvider from './Provider/AuthProvider';
 import { ToastContainer } from 'react-toastify';
+import PrivateRoute from './PrivateRoute';
+
+import Products from './components/Products/Products';
 
 const router = createBrowserRouter([
   {
@@ -33,15 +36,21 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproducts',
-        element: <AddProduct></AddProduct>
+        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute> 
       },
       {
         path: '/mycart',
-        element: <MyCard></MyCard>
+        element:<PrivateRoute><MyCard></MyCard></PrivateRoute> 
       },
       {
         path: 'about',
-        element: <About></About>
+        element:<PrivateRoute><About></About>
+      </PrivateRoute> 
+      },
+      {
+        path: '/:brand_name',
+        element:<PrivateRoute><Products></Products></PrivateRoute> ,
+        loader: ({params}) => fetch(`http://localhost:5000/products/${params.brand_name}`)
       }
     ]
   },
