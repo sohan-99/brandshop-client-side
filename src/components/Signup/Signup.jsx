@@ -51,7 +51,7 @@ const Signup = () => {
             
     
     return (
-        <div>
+        <div className="my-6">
             <Navber></Navber>
             <div className="mt-14 mb-9 flex flex-col items-center justify-center">
                 <div className="bg-stone-300 lg:max-w-lg w-[80%] md:w-[75%] lg:w-[85%]  p-8 rounded-lg shadow-lg">

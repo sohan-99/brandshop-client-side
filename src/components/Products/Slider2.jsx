@@ -3,7 +3,7 @@
 const Slider2 = () => {
     return (
         <div>
-             <div className="my-3 carousel lg:w-full lg:h-[500px]">
+             <div className="my-3 carousel lg:w-full  lg:h-[500px] md:h-[450px] h-[300px]">
         <div id="slide1" className="carousel-item relative w-full">
             <img src="https://i.ibb.co/thSWnnT/photo-1515968004492-e6224002d7db-auto-format-fit-crop-q-60-w-500-ixlib-rb-4-0.jpg" className="w-full" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

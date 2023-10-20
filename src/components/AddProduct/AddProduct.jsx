@@ -63,7 +63,8 @@ const AddProduct = () => {
                                 <span className="text-lg font-medium">Brand Name :</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="bnam" placeholder="Brand Name" className="input input-bordered w-full" />
+                                <input type="text" name="bnam" placeholder="Brand Name"
+                                    className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control ml-4 md:w-1/2">

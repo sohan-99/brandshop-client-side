@@ -48,7 +48,7 @@ const Update = () => {
             <Navber></Navber>
 
             <div className="bg-[#F4F3F0] mt-2 p-24">
-                <h2 className="text-3xl mb-4 text-center font-extrabold">Add Product</h2>
+                <h2 className="text-3xl mb-4 text-center font-extrabold">Update Product</h2>
                 <form onSubmit={handleAddProducts}>
                     {/* one  */}
                     <div className="md:flex mb-8">
@@ -119,7 +119,7 @@ const Update = () => {
                         </div>
                     </div>
                     <div className="flex justify-center"> {/* Centered button */}
-                        <input type="submit" value="Add Product" className="btn bg-[#5576ce]" />
+                        <input type="submit" value="Update Product" className="btn bg-[#5576ce]" />
                     </div>
                 </form>
             </div>

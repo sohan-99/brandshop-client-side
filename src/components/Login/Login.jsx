@@ -58,7 +58,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="my-6">
 
             <Navber></Navber>
             <div className="mt-14 mb-9 flex flex-col items-center justify-center">

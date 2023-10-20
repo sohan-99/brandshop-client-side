@@ -2,15 +2,16 @@
 
 
     const ExtraSection1 = () => {
-        const sectionStyle = {
-            backgroundImage: `url(https://i.ibb.co/WyfjbRt/360-F-268781659-03d-Ou7o-GBLo2-KLwfr-Ko-Qq-Nqi-DMt21u-Qr.jpg)`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-        };
+        // const sectionStyle = {
+        //     backgroundImage: `url(https://i.ibb.co/WyfjbRt/360-F-268781659-03d-Ou7o-GBLo2-KLwfr-Ko-Qq-Nqi-DMt21u-Qr.jpg)`,
+        //     backgroundSize: 'cover',
+        //     backgroundRepeat: 'no-repeat',
+        //     backgroundPosition: 'center',
+        // };
+        // style={sectionStyle}
     return (
-        <div className="h-[500px]" style={sectionStyle}>
-        <h2 className="lg:text-5xl lg:font-bold lg:mt-12 md:mt-7 mt-4 text-center">WHAT MAKES THE ESSENTIAL DIFFERENT?</h2>
+        <div className="h-[500px]" >
+        <h2 className="lg:text-5xl md:text-3xl text-2xl lg:font-bold md:font-semibold font-medium lg:mt-12 md:mt-7 mt-4 lg:mb-0 md:mb-2  text-center">WHAT MAKES THE ESSENTIAL DIFFERENT?</h2>
         <h1 className="text-3xl font-medium mt-9 text-slate-700 text-center">EXPERIENCE HIGH PERFORMANCE AND SECURE</h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-4 mt-24">
             <div className="text-center">
