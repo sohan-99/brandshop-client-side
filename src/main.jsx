@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import React from 'react';
 import Home from './components/Home/Home';
@@ -15,6 +15,8 @@ import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute';
 
 import Products from './components/Products/Products';
+import Update from './components/AddProduct/Update';
+import Details from './components/AddProduct/Details';
 
 const router = createBrowserRouter([
   {
@@ -27,30 +29,38 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: '/login',
+        element: <Login></Login>
       },
       {
-        path:'/signup',
-        element:<Signup></Signup>
+        path: '/signup',
+        element: <Signup></Signup>
       },
       {
         path: '/addproducts',
-        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute> 
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
         path: '/mycart',
-        element:<PrivateRoute><MyCard></MyCard></PrivateRoute> 
+        element: <PrivateRoute><MyCard></MyCard></PrivateRoute>
       },
       {
         path: 'about',
-        element:<PrivateRoute><About></About>
-      </PrivateRoute> 
+        element: <PrivateRoute><About></About>
+        </PrivateRoute>
       },
       {
         path: '/:brand_name',
-        element:<PrivateRoute><Products></Products></PrivateRoute> ,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.brand_name}`)
+        element: <PrivateRoute><Products></Products></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand_name}`)
+      },
+      {
+        path: '/update/:_id',
+        element: <Update></Update>
+      },
+      {
+        path: '/details/:_id',
+        element: <Details></Details>
       }
     ]
   },
@@ -60,8 +70,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <ToastContainer />
-    <RouterProvider router={router} />
+      <ToastContainer />
+      <RouterProvider router={router} />
     </AuthProvider>
 
   </React.StrictMode>,

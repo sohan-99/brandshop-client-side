@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Navber from "../Navber/Navber";
 
 import Slider2 from "./Slider2";
@@ -26,8 +26,14 @@ const Products = () => {
                             <h3 className="lg:text-2xl font-semibold"> Product Type:{product.type}</h3>
                             <h3 className="lg:text-2xl font-semibold"> Price:{product.price}$</h3>
                             <h3 className="lg:text-2xl lg:font-semibold"> Product Rating:{product.rating}</h3>
+                            
                         </div>
+                        <Link to={`/update/${product._id}`}>
                         <button className="btn btn-secondary text-center">Update </button>
+                        </Link>
+                        <Link to={`/details/${product._id}`}>
+                        <button className="btn btn-secondary text-center">Update </button>
+                        </Link>
                     </div>
                 ))
             }
