@@ -26,13 +26,12 @@ const Products = () => {
                             <h3 className="lg:text-2xl font-semibold"> Product Type:{product.type}</h3>
                             <h3 className="lg:text-2xl font-semibold"> Price:{product.price}$</h3>
                             <h3 className="lg:text-2xl lg:font-semibold"> Product Rating:{product.rating}</h3>
-                            
                         </div>
                         <Link to={`/update/${product._id}`}>
                         <button className="btn btn-secondary text-center">Update </button>
                         </Link>
                         <Link to={`/details/${product._id}`}>
-                        <button className="btn btn-secondary text-center">Update </button>
+                        <button className="btn btn-secondary text-center">Details</button>
                         </Link>
                     </div>
                 ))
