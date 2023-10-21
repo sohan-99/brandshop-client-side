@@ -4,7 +4,7 @@
 import Swal from "sweetalert2";
 
 
-const Allcard = ({ item }) => {
+const Allcard = ({ item,setRefetch }) => {
     const { _id, name } = item;
 
     const handleDelet = (_id) => {
@@ -32,6 +32,7 @@ const Allcard = ({ item }) => {
                                 'YourCart has been deleted.',
                                 'success'
                             )
+                            setRefetch(true)
                         }
                     })
             }
