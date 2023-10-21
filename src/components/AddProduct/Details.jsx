@@ -13,7 +13,7 @@ const Details = () => {
     const handleAddCart = () => {
         const { price, sdec, image, type, bandName, name } = productDetails;
         const addProduct = { price, sdec, image, type, bandName, name,email:email }
-        fetch('http://localhost:5000/mycart', {
+        fetch('https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/mycart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -29,8 +29,8 @@ const Details = () => {
     // console.log(productDetails);
     // const params = useParams();
     // console.log(params)
-    const { price, sdec, image, type, bandName, name } = productDetails;
     // console.log(name);
+    const { price, sdec, image, type, bandName, name } = productDetails;
 
     return (
         <div>

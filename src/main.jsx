@@ -9,7 +9,6 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import AddProduct from './components/AddProduct/AddProduct';
 import MyCard from './components/MyCard/MyCard';
-import About from './components/About/About';
 import AuthProvider from './Provider/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import PrivateRoute from './PrivateRoute';
@@ -43,27 +42,22 @@ const router = createBrowserRouter([
       {
         path: '/mycart',
         element: <PrivateRoute><MyCard></MyCard></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/mycart')
-      },
-      {
-        path: 'about',
-        element: <PrivateRoute><About></About>
-        </PrivateRoute>
+        loader: () => fetch('https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/mycart')
       },
       {
         path: '/:brand_name',
-        element: <PrivateRoute><Products></Products></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand_name}`)
+        element: <Products></Products>,
+        loader: ({ params }) => fetch(`https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/products/${params.brand_name}`)
       },
       {
         path: '/update/:id',
-        element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
+        element:<PrivateRoute><Update></Update></PrivateRoute> ,
+        loader: ({ params }) => fetch(`https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/update/${params.id}`)
       },
       {
         path: '/details/:id',
-        element: <Details></Details>,
-        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
+        element:<PrivateRoute><Details></Details></PrivateRoute> ,
+        loader: ({ params }) => fetch(`https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/update/${params.id}`)
       }
     ]
   },

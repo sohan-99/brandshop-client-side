@@ -15,7 +15,7 @@ const AddProduct = () => {
         const user = { image, name, bandName, type, price, sdec, rating };
         console.log(user);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

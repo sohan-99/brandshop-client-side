@@ -25,7 +25,7 @@ const Update = () => {
         const user = { image, name, bandName, type, price, sdec, rating };
         console.log(user);
 
-        fetch(`http://localhost:5000/update/${lodederData._id}`, {
+        fetch(`https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/update/${lodederData._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

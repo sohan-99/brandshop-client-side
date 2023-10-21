@@ -9,7 +9,7 @@ const MyCard = () => {
     const [cardData, setCardData] = useState([]);
     const [reFetch, setRefetch] = useState(false);
     useEffect(()=>{
-        fetch('http://localhost:5000/mycart')
+        fetch('https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/mycart')
         .then(res=>res.json())
         .then(data=>{setCardData(data)})
     },[reFetch])

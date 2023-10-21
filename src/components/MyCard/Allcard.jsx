@@ -20,7 +20,7 @@ const Allcard = ({ item,setRefetch }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/mycart/${_id}`, {
+                fetch(`https://divicedazzle-server-9cpnygp4i-sohan75632.vercel.app/mycart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -39,7 +39,11 @@ const Navber = () => {
                 </div>
                 {/* <img className="w-[160px] h-20 " src="https://i.ibb.co/BnxJMb3/Whats-App-Image-2023-10-18-at-2-11-09-PM.jpg" alt="" /> */}
                 <Link to='/'>
-                    <h2 className="lg:text-4xl md:text-2xl text-base  lg:font-extrabold md:font-bold font-normal"><span className="text-indigo-900">Device</span>  <span className="text-red-600">Dazzle</span></h2>
+                    <div className="flex lg:space-x-1">
+
+                    <h2 className="lg:text-4xl md:text-2xl text-lg default:hidden  lg:font-extrabold md:font-bold font-medium">  <span className="text-red-600">Device</span></h2>
+                    <img src="https://i.ibb.co/1KR8rNS/rsz-logo.jpg" alt="" />
+                    </div>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
